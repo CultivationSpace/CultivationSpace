@@ -1,0 +1,75 @@
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #F9FAFB;
+    color: #555;
+    font-family: 'Sora', 'Arial', sans-serif;
+    font-weight: 300;
+    
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+
+
+
+
+h1 {
+    color: #328378;
+    font-weight: 600;
+    font-size: 250%;
+}
+
+
+@font-face {
+    font-family: "Sora";
+    src:;
+}
+
+
+.supporter {
+    display: flex;
+    justify-content: center;
+}
+
+h2,
+h3, {
+    text-align: center;
+}
