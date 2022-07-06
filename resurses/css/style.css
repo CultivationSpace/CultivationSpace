@@ -35,7 +35,7 @@ body {
 
 
 .row {
-    max-width: 1140px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -45,6 +45,7 @@ section {
 
 .box {
     padding: 1%;
+     background-color: #A3F2E0;
 }
 
 
@@ -67,9 +68,17 @@ h1 {
 .supporter {
     display: flex;
     justify-content: center;
+    background-color: #F0FCF9;
+    border-color: #5ACBB7;
+    margin-right: 2.5rem;
 }
 
 h2,
 h3, {
     text-align: center;
 }
+.questions {
+    background-color: #F0FCF9;
+}
+
+
