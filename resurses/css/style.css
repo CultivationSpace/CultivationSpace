@@ -59,15 +59,20 @@ h1 {
   src: ;
 }
 
+.sup {
+    display: flex;
+}
+
+
 .supporter {
   display: flex;
   justify-content: center;
   background-color: #f0fcf9;
-  border-color: #5acbb7;
+  border:solid #5acbb7;
   margin-right: 2.5rem;
 }
 
-h2,
+
 h3 {
   text-align: center;
 }
@@ -80,7 +85,7 @@ h3 {
   height: 43.82px;
 }
 
-.backgound {
+.footer-nav {
   background-color: #78e4cf;
 }
 
@@ -146,3 +151,19 @@ details p {
   margin: 0 0 1rem;
   padding-top: 1rem;
 }
+
+.photo {
+    padding: 1rem;
+    
+}
+
+.image {
+    width: 25rem;
+    height: auto;
+}
+
+.right-end {
+    float: right;
+}
+
+
