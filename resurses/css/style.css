@@ -70,6 +70,7 @@ h1 {
   background-color: #f0fcf9;
   border:solid #5acbb7;
   margin-right: 2.5rem;
+    margin: 0rem 2rem;
 }
 
 
@@ -166,4 +167,13 @@ details p {
     float: right;
 }
 
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+    background-color: #78E4CF !important;
+    border-color: #78E4CF !important;
+    color: #214441;
+}
 
+.photo-logo {
+    width: 20rem;
+    height: auto;
+}
