@@ -4072,6 +4072,9 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+    
+    
+    
   .navbar-expand-sm {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -5603,6 +5606,8 @@ textarea.form-control-lg {
 }
 
 @media (min-width: 576px) {
+    
+    
   .modal {
     --bs-modal-margin: 1.75rem;
     --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

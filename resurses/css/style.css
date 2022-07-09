@@ -174,7 +174,7 @@ details p {
 }
 
 .photo-logo {
-    width: 20rem;
+    width: 15rem;
     height: auto;
 }
 
@@ -208,4 +208,9 @@ h3:after {
 }
 .space {
     margin-right: 1rem;
+}
+
+.img-sup {
+    width: 10rem;
+    height: auto;
 }
