@@ -66,7 +66,7 @@ h1 {
 
 .supporter {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #f0fcf9;
   border:solid #5acbb7;
   margin-right: 2.5rem;
@@ -118,28 +118,33 @@ details summary: :-webkit-deails-marker {
 
 details summary {
   width: 100%;
-  padding: 0.5rem 0;
-  border-top: solid #d1d5db;
+  padding: 1rem 1rem;
+  border-top: solid #d1d5db thin;
   position: relative;
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 600;
   list-style: none;
+    
 }
 
-details summary:after {
+details summary:before {
   content: "\203A";
+  transform: rotate(90deg);
   color: #48ad9c;
-  position: absolute;
-  font-size: 1.75rem;
+  padding: 0 1rem;
+  font-size: 2rem;
   line-height: 0;
   margin-top: 0.75rem;
   right: 0;
   transform-origin: center;
   transition: 200ms linear;
+    font-weight: 200;
+    position: absolute;
+    
 }
-details[open] summary::after {
-  transform: rotate(90deg);
+details[open] summary:before {
+  transform: rotate(270deg);
   font-size: 2rem;
 }
 
@@ -149,12 +154,15 @@ details summary {
 
 details p {
   font-size: 0.95rem;
-  margin: 0 0 1rem;
+  margin:  0 2rem;
   padding-top: 1rem;
+    padding-left: 1rem;
+    
 }
 
+
 .photo {
-    padding: 1rem;
+    padding: 1rem 0;
     
 }
 
@@ -213,4 +221,5 @@ h3:after {
 .img-sup {
     width: 10rem;
     height: auto;
+    margin: 1rem 0;
 }
