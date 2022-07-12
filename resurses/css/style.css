@@ -88,6 +88,7 @@ h3 {
 
 .footer-nav {
   background-color: #78e4cf;
+    
 }
 
 .icon {
@@ -222,4 +223,18 @@ h3:after {
     width: 10rem;
     height: auto;
     margin: 1rem 0;
+}
+
+.code-of-conduct {
+    background-image:linear-gradient(rgba(207, 249, 239, 0.32), rgba(207, 249, 239, 1)), url(img/background-1.svg);
+    
+    background-position: cover;
+    height: 21rem;
+    background-attachment: fixed;
+    background-color: #cccccc;
+}
+
+.information {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
 }
