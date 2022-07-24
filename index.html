@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cultivation Space</title>
     
     <script src="vendor/js/bootstrap.bundle.js"></script>
+    <script src="resurses/js/main.js"></script>  
     
       
 
@@ -22,73 +24,54 @@
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <nav class="navbar sticky-top navbar-expand-lg bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="index.html"
-              ><img class="photo-logo" src="resurses/img/logo.svg"
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >about</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index-1.html">code of conduct</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">get involved</a>
-                </li>
-                <li class="nav-item">
-                  <button type="button" class="btn btn-success" onclick="document.location='index-2.html'">
-                    donate
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <header class="primary-header">
+        <div class="nav-wrapper">
+    <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mt-4">
-            <div class="hero-text-box">
-              <h1>Where open source projects grow together.</h1>
+          
 
-              <p class="long-copy">
-                Cultivation Space is a coworking space where activists,
-                journalists and artists meet to work on projects for the common
-                good. We rely on donations and take no profit.
-              </p>
-                <div class=" mt-4">
-              <button type="button" onclick="document.location='index-2.html'" class="btn btn-success space">Donate</button>
-              <button type="button" class="btn btn-outline-dark">Get involved</button>
-                    </div>
-            </div>
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+        </div>
+
+      
+    </header>
+    <main>  
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="even-columns">
+          <div>
+            <h1 class="fs-primary-heading fw-bold">Where open source projects grow together.</h1>
+            <p>Cultivation Space is a coworking space where activists, journalists and artists meet to work on projects for the common good. We rely on donations and take no profit.</p>
+            <button class="button">Donate</button>
+              <button class="button-transparent">Get Involved</button>
           </div>
-          <div class="col-md-6 mt-4 d-none d-md-block photo">
-            <img class="image"
-              src="resurses/img/Cultivation%20Space%20Berlin-20220519-266-20-.svg"
-            />
+          <div class="display-md-inline-flex">
+            <img src="resurses/img/Cultivation%20Space%20Berlin-20220519-266-20-.svg" alt="Office Photo">
           </div>
         </div>
       </div>
-    </header>
+    </section>    
 
     <section class="supporters">
       <div class="container">
@@ -238,10 +221,10 @@
             </p>
           </div>
           <div class="col-md-6 mt-4">
-            <button type="button" class="btn btn-danger space">
+            <button type="button-darker" class="button">
               English Report
             </button>
-            <button type="button" class="btn btn-outline-dark">German Report</button>
+            <button type="button" class="button-transparent">German Report</button>
           </div>
         </div>
       </div>
@@ -359,7 +342,7 @@
       </div>
     </section>
        
-      
+    </main>  
       
 
     <footer>

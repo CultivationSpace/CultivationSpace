@@ -3989,6 +3989,7 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+    
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -4026,6 +4027,7 @@ textarea.form-control-lg {
 }
 
 .navbar-collapse {
+    
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
@@ -5607,7 +5609,9 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
     
-    
+    .navbar-brand {
+        width: 20rem;
+    }
   .modal {
     --bs-modal-margin: 1.75rem;
     --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -5624,6 +5628,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
+    
   .modal-lg,
 .modal-xl {
     --bs-modal-width: 800px;
@@ -5654,6 +5659,12 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 575.98px) {
+    .logo-c {
+        width: 15rem;
+    }
+    .navbar-brand {
+        width: 15rem;
+    }
   .modal-fullscreen-sm-down {
     width: 100vw;
     max-width: none;
