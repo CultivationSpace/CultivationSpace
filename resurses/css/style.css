@@ -329,11 +329,6 @@ body {
 
 }
 
-.navbar-collapse {
-    position: absolute !important;
-    width: 100%;
-    top: 100%;
-}
 
 
 
@@ -426,6 +421,7 @@ padding-block: var(--size-700);
 }
 
 @media (max-width: 50em) {
+    
 .display-md-inline-flex {
   display: none;
   
