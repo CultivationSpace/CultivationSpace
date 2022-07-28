@@ -46,9 +46,9 @@
 @media (min-width: 50em) {
   :root {
     --fs-body: var(--fs-500);
-    --fs-primary-heading: var(--fs-900);
+    --fs-primary-heading: var(--fs-700);
     --fs-secondary-heading: var(--fs-800);
-
+      
     --fs-nav: var(--fs-300);
   }
 }
@@ -142,6 +142,10 @@ svg {
     width: 10rem;
     height: auto;
   }
+    .supporter {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 /* general styling */
@@ -191,7 +195,7 @@ header {
   text-decoration: none;
   border: 0;
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
 
   color: var(--clr-neutral-900);
   background-color: var(--clr-accent-300);
@@ -498,8 +502,20 @@ h1 {
   margin: 0rem 2.5rem;
 }
 
+h2 {
+    font-weight: 600;
+    color: #214441;
+}
+
 h3 {
   text-align: center;
+    font-weight: 600;
+    color: #000;
+}
+
+h6 {
+    font-weight: 800;
+    color: #000;
 }
 
 h8 {
@@ -509,6 +525,12 @@ h8 {
     text-align: center;
     
 }
+
+.reporter {
+    font-weight: 400;
+    color: #000;
+}
+
 .questions {
   background-color: #f0fcf9;
 }
