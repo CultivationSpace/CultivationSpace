@@ -152,6 +152,12 @@ body {
   color: var(--clr-primary-400);
 }
 
+header {
+    font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-400);
+}
+
 /* button */
 .button-darker {
   cursor: pointer;
@@ -160,7 +166,7 @@ body {
   border-radius: 0.25rem;
   padding: 0.5rem 1.5rem;
 
-  color: var(--clr-accent-500);
+  color: var(--clr-neutral-100);
   background-color: var(--clr-accent-500);
 }
 
@@ -171,13 +177,13 @@ body {
 
 .button-darker:hover,
 .button-darker:focus-visible {
-  background-color: var(--clr-accent-300);
+  background-color: var(--clr-accent-400);
 }
 
 .button-darker[data-type="inverted"]:hover,
 .button-darker[data-type="inverted"]:focus-visible {
   background-color: var(--clr-neutral-100);
-  color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
 }
 
 .button {
@@ -185,7 +191,7 @@ body {
   text-decoration: none;
   border: 0;
   border-radius: 0.25rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
 
   color: var(--clr-neutral-900);
   background-color: var(--clr-accent-300);
@@ -213,9 +219,10 @@ body {
   padding: 0.5rem 1.5rem;
   border-color: var(--clr-neutral-900);
   border-radius: 0.25rem;
-
   color: var(--clr-neutral-900);
-  background-color: var(--clr-accent-100);
+    padding: 0.5rem 1rem;
+
+  
 }
 
 .bbutton-transparent[data-type="inverted"] {
@@ -264,6 +271,10 @@ body {
 }
 
 @media (max-width: 50em) {
+    .img-sup {
+        width: 5rem;
+    }
+    
   .primary-navigation {
     display: none;
     position: absolute;
@@ -432,6 +443,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 .clearfix {
   zoom: 1;
 }
@@ -477,16 +490,24 @@ h1 {
 }
 
 .supporter {
-  display: flex;
-  justify-content: space-evenly;
+  
+  
   background-color: #f0fcf9;
   border: solid #5acbb7;
   margin-right: 2.5rem;
-  margin: 0rem 2rem;
+  margin: 0rem 2.5rem;
 }
 
 h3 {
   text-align: center;
+}
+
+h8 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    
 }
 .questions {
   background-color: #f0fcf9;
@@ -499,6 +520,7 @@ h3 {
 
 .footer-nav {
   background-color: #78e4cf;
+    font-weight: 600;
 }
 
 .icon {
@@ -643,4 +665,10 @@ h3:after {
 .information {
   margin-top: 2rem;
   margin-bottom: 6rem;
+}
+
+
+
+.font-b {
+    font-weight: 600;
 }
