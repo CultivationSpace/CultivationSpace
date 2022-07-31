@@ -277,7 +277,7 @@ header {
 @media (max-width: 50em) {
     @media (max-width: 600px) {
     .img-sup {
-        width: 50%;
+        width: 9rem;
         height: auto;
     }
         }
