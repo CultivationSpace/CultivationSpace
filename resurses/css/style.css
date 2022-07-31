@@ -275,9 +275,12 @@ header {
 }
 
 @media (max-width: 50em) {
+    @media (max-width: 600px) {
     .img-sup {
-        width: 5rem;
+        width: 50%;
+        height: auto;
     }
+        }
     
   .primary-navigation {
     display: none;
@@ -493,14 +496,28 @@ h1 {
   display: flex;
 }
 
+
+@media (max-width: 600px) {
+    .supporter {
+        width: 100%!important;
+    }
+    
+    
+    
+}
+
 .supporter {
   
   
   background-color: #f0fcf9;
-  border: solid #5acbb7;
-  margin-right: 2.5rem;
-  margin: 0rem 2.5rem;
+  border: 0.125rem solid #5acbb7;
+  width: 100%;
+    max-width: 550px;
+    padding: 0.5em 1em;
+    margin: 0 auto;
 }
+
+
 
 h2 {
     font-weight: 600;
@@ -666,7 +683,7 @@ h3:after {
 }
 
 .img-sup {
-  width: 10rem;
+  width: 9rem;
   height: auto;
   margin: 1rem 0;
 }
