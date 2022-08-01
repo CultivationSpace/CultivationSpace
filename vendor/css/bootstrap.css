@@ -3334,6 +3334,9 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #212529;
   --bs-btn-disabled-bg: transparent;
   --bs-gradient: none;
+    padding: 0.5rem 1.4rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
 }
 
 .btn-link {

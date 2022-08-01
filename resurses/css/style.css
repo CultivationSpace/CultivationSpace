@@ -195,7 +195,7 @@ header {
   text-decoration: none;
   border: 0;
   border-radius: 0.25rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.55rem 1.5rem;
 
   color: var(--clr-neutral-900);
   background-color: var(--clr-accent-300);
@@ -694,7 +694,7 @@ h3:after {
       rgba(207, 249, 239, 0.32),
       rgba(207, 249, 239, 1)
     ),
-    url(img/background-1.svg);
+    url(img/cut.png);
 
   background-position: cover;
   height: 21rem;
@@ -711,4 +711,8 @@ h3:after {
 
 .font-b {
     font-weight: 600;
+}
+
+.hero-text-box {
+    padding-top: 11em;
 }
