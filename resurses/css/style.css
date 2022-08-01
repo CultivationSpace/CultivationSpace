@@ -277,7 +277,7 @@ header {
 @media (max-width: 50em) {
     @media (max-width: 600px) {
     .img-sup {
-        width: 9rem;
+        width: 9rem!important;
         height: auto;
     }
         }
@@ -483,8 +483,8 @@ section {
 
 h1 {
   color: #328378;
-  font-weight: 600;
-  font-size: 250%;
+  font-weight: 500!important;
+  font-size: 330%;
 }
 
 @font-face {
@@ -684,7 +684,7 @@ h3:after {
 }
 
 .img-sup {
-  width: 9rem;
+  width: 13rem;
   height: auto;
   margin: 1rem 0;
 }
@@ -715,4 +715,12 @@ h3:after {
 
 .hero-text-box {
     padding-top: 11em;
+}
+
+
+
+.header-p {
+    font-weight: 400;
+    padding-right: 1.2rem;
+    
 }
