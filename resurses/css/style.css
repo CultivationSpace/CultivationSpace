@@ -694,7 +694,7 @@ h3:after {
       rgba(207, 249, 239, 0.32),
       rgba(207, 249, 239, 1)
     ),
-    url(img/cut.png);
+    url(img/cut-1.png);
 
   background-position: cover;
   height: 21rem;
@@ -714,7 +714,7 @@ h3:after {
 }
 
 .hero-text-box {
-    padding-top: 11em;
+    padding-top: 10em;
 }
 
 
