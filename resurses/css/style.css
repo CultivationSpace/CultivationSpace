@@ -484,7 +484,7 @@ section {
 h1 {
   color: #328378;
   font-weight: 500!important;
-  font-size: 330%;
+  
 }
 
 @font-face {
@@ -505,6 +505,7 @@ h1 {
     
     
 }
+
 
 .supporter {
   
@@ -690,11 +691,7 @@ h3:after {
 }
 
 .code-of-conduct {
-  background-image: linear-gradient(
-      rgba(207, 249, 239, 0.32),
-      rgba(207, 249, 239, 1)
-    ),
-    url(img/cut-1.png);
+  background-image: url(img/cut-1.png);
 
   background-position: cover;
   height: 21rem;
@@ -714,7 +711,7 @@ h3:after {
 }
 
 .hero-text-box {
-    padding-top: 10em;
+    padding-top: 9.4em;
 }
 
 
