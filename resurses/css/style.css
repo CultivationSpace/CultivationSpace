@@ -48,7 +48,7 @@
     --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-700);
     --fs-secondary-heading: var(--fs-800);
-      
+
     --fs-nav: var(--fs-300);
   }
 }
@@ -142,10 +142,10 @@ svg {
     width: 10rem;
     height: auto;
   }
-    .supporter {
-        margin: 0;
-        padding: 0;
-    }
+  .supporter {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* general styling */
@@ -157,7 +157,7 @@ body {
 }
 
 header {
-    font-size: var(--fs-body);
+  font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
 }
@@ -224,9 +224,7 @@ header {
   border-color: #000;
   border-radius: 0.25rem;
   color: #000;
-    padding: 0.5rem 1rem;
-
-  
+  padding: 0.5rem 1rem;
 }
 
 .bbutton-transparent[data-type="inverted"] {
@@ -275,13 +273,13 @@ header {
 }
 
 @media (max-width: 50em) {
-    @media (max-width: 600px) {
+  @media (max-width: 600px) {
     .img-sup {
-        width: 9rem!important;
-        height: auto;
+      width: 9rem !important;
+      height: auto;
     }
-        }
-    
+  }
+
   .primary-navigation {
     display: none;
     position: absolute;
@@ -450,8 +448,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 .clearfix {
   zoom: 1;
 }
@@ -481,12 +477,6 @@ section {
   background-color: #a3f2e0;
 }
 
-h1 {
-  color: #328378;
-  font-weight: 500!important;
-  
-}
-
 @font-face {
   font-family: "Sora";
   src: ;
@@ -496,58 +486,47 @@ h1 {
   display: flex;
 }
 
-
 @media (max-width: 600px) {
-    .supporter {
-        width: 100%!important;
-    }
-    
-    
-    
+  .supporter {
+    width: 100% !important;
+  }
 }
 
+/* ---- h style ------ */
 
-.supporter {
-  
-  
-  background-color: #f0fcf9;
-  border: 0.125rem solid #5acbb7;
-  width: 100%;
-    max-width: 550px;
-    padding: 0.5em 1em;
-    margin: 0 auto;
+h1 {
+  color: #328378;
+  font-weight: 500 !important;
 }
-
-
 
 h2 {
-    font-weight: 600;
-    color: #214441;
+  font-weight: 600;
+  color: #214441;
 }
 
 h3 {
   text-align: center;
-    font-weight: 600;
-    color: #000;
+  font-weight: 600;
+  color: #000;
 }
 
 h6 {
-    font-weight: 800;
-    color: #000;
+  font-weight: 800;
+  color: #000;
 }
 
 h8 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: #000;
-    text-align: center;
-    
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: center;
 }
 
+/* ----- section style ------*/
+
 .reporter {
-    font-weight: 400;
-    color: #000;
-    
+  font-weight: 400;
+  color: #000;
 }
 
 .questions {
@@ -561,7 +540,16 @@ h8 {
 
 .footer-nav {
   background-color: #78e4cf;
-    font-weight: 600;
+  font-weight: 600;
+}
+
+.code-of-conduct {
+  background-image: url(img/cut-1.png);
+
+  background-position: cover;
+  height: 21rem;
+  background-attachment: fixed;
+  background-color: #cccccc;
 }
 
 .icon {
@@ -626,6 +614,8 @@ details p {
   padding: 1rem;
 }
 
+/* ------ img style ------*/
+
 .photo {
   padding: 1rem 0;
 }
@@ -638,6 +628,8 @@ details p {
 .right-end {
   float: right;
 }
+
+/*------ buttons -------*/
 
 .btn-success,
 .btn-success:hover,
@@ -690,34 +682,20 @@ h3:after {
   margin: 1rem 0;
 }
 
-.code-of-conduct {
-  background-image: url(img/cut-1.png);
-
-  background-position: cover;
-  height: 21rem;
-  background-attachment: fixed;
-  background-color: #cccccc;
-}
-
 .information {
   margin-top: 2rem;
   margin-bottom: 6rem;
 }
 
-
-
 .font-b {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .hero-text-box {
-    padding-top: 9.4em;
+  padding-top: 9.4em;
 }
 
-
-
 .header-p {
-    font-weight: 400;
-    padding-right: 1.2rem;
-    
+  font-weight: 400;
+  padding-right: 1.2rem;
 }
