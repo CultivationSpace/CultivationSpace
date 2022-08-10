@@ -1,2 +1,2 @@
-# Cultivatio
-A crative place for creative peoples. You can find us in Berlin. Contact us!
+# Cultivation Space
+The website for Cultivation Space in Berlin's Wedding at exRotaPrint
