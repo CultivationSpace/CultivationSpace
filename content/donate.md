@@ -16,4 +16,4 @@ Your donation is tax deductible in all EU member states. For donations up to 300
 
 As a thank you for your support, we do have some fabulous swag for our supporters. Please reach out to us if you would like to receive some swag as a thank you for your donation.
 
-![Donate to get this merch](/img/donate.png)
+![Donate to get this merch](/img/donate.webp)
