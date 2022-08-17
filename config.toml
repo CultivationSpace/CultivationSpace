@@ -1,0 +1,115 @@
+baseURL = 'https://cultivation.space/'
+title = 'Cultivation Space'
+
+defaultContentLanguage = "en"
+languageCode = 'en-us'
+
+rssLimit  = 300
+copyright = "Some rights reserved. Unless otherwise noted, content on this page is under a Creative Commons license."
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = true
+enableEmoji     = true
+enableMissingTranslationPlaceholders = true
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = true
+
+pluralizeListTitles = false
+paginate = 8
+
+[author]
+  name = "Cultivation Space"
+  email = "contact@techcultivation.org"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+ # Metadata mostly used in document's head
+  description = "Cultivation Space is a workspace where activists, journalists and artists meet to work on projects for the common good. We rely on donations and take no profit."
+  keywords = ""
+  images = ["img/default.png"]
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  gitUrl = "https://github.com/CultivationSpace/CultivationSpace/commit/"
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  justifyContent = false
+
+   # Colors for favicons
+  [params.favicon.color]
+    mask = "#328378"
+    msapplication = "#328378"
+
+[languages]
+  [languages.en]
+    subtitle  = ""
+    weight    = 1
+    copyright = 'Some rights reserved. Unless otherwise noted, content on this page is under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" title="License"> Creative Commons license</a>.'
+  [[languages.en.menu.main]]
+    identifier = "book-room"
+    name       = "Book a Room"
+    url        = "/book/"
+    weight     = "1"
+  [[languages.en.menu.main]]
+    identifier = "code-of-conduct"
+    name       = "Code of Conduct"
+    url        = "/coc/"
+    weight     = "2"
+  [[languages.en.menu.main]]
+    identifier = "donate"
+    name       = "Donate"
+    url        = "/donate/"
+    weight     = "3"
+  [[languages.en.menu.footer]]
+    identifier = "imprint"
+    name       = "Imprint"
+    url        = "/imprint"
+    weight     = "1"
+
+[privacy]
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true

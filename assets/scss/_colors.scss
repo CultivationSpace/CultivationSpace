@@ -1,0 +1,72 @@
+// Default colors
+$white: #ffffff;
+$black: #000000;
+
+// teal
+$teal-list: (
+  "50": #F0FDF9,
+  "100": #CFFBF0,
+  "200": #9FF6E2,
+  "300": #67EAD1,
+  "400": #37D6BB,
+  "500": #0EB79F,
+  "600": #109786,
+  "700": #237C71,
+  "800": #145951,
+  "900": #124641,
+);
+
+$teal-50: map-get($teal-list, "50");
+$teal-100: map-get($teal-list, "100");
+$teal-200: map-get($teal-list, "200");
+$teal-300: map-get($teal-list, "300");
+$teal-400: map-get($teal-list, "400");
+$teal-500: map-get($teal-list, "500");
+$teal-600: map-get($teal-list, "600");
+$teal-700: map-get($teal-list, "700");
+$teal-800: map-get($teal-list, "800");
+$teal-900: map-get($teal-list, "900");
+
+// Gray
+$gray-list: (
+  "50": #F9FAFB,
+  "100": #F3F4F6,
+  "200": #E5E7EB,
+  "300": #D1D5DB,
+  "400": #9CA3AF,
+  "500": #6B7280,
+  "600": #4B5563,
+  "700": #374151,
+  "800": #1F2937,
+  "900": #111827,
+);
+
+$gray-50: map-get($gray-list, "50");
+$gray-100: map-get($gray-list, "100");
+$gray-200: map-get($gray-list, "200");
+$gray-300: map-get($gray-list, "300");
+$gray-400: map-get($gray-list, "400");
+$gray-500: map-get($gray-list, "500");
+$gray-600: map-get($gray-list, "600");
+$gray-700: map-get($gray-list, "700");
+$gray-800: map-get($gray-list, "800");
+$gray-900: map-get($gray-list, "900");
+
+
+// Dynamic background and color classes creation
+@each $value in $teal-list {
+  .background-teal-#{nth($value, 1)} {
+    background-color: nth($value, 2) !important;
+  }
+  .color-teal-#{nth($value, 1)} {
+    color: nth($value, 2) !important;
+  }
+}
+@each $value in $gray-list {
+  .background-gray-#{nth($value, 1)} {
+    background-color: nth($value, 2) !important;
+  }
+  .color-gray-#{nth($value, 1)} {
+    color: nth($value, 2) !important;
+  }
+}

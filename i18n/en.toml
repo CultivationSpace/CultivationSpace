@@ -1,0 +1,13 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# Generic
+[translations]
+other = "Translations"
+
+# 404.html
+[home]
+other = "Home"
+
+[notFound]
+other = "Oops, page not found…"

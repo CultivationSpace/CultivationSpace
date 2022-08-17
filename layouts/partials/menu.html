@@ -1,0 +1,24 @@
+<div class="container-fluid pt-4">
+    <div id="menu" class="container">
+      <nav class="navbar navbar-expand-lg justify-content-between align-items-center" aria-label="Primary">
+        <a aria-label="Cultivation Space Logo" class="navbar-brand" href="{{ .Site.BaseURL }}">
+          <img class="img-fluid" src="{{ .Site.BaseURL }}/img/logo.svg" alt="Cultivation Space logo" width="250px" height="auto">
+        </a>
+
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+
+        <div id="menu-items" class="collapse navbar-collapse flex-grow-0 mt-lg-0 mt-4">
+          <ul class="navbar-nav align-items-lg-center">
+            {{- $firstUrlElement := print "/" (index (split .RelPermalink "/") 1) "/" -}}
+            {{- range .Site.Menus.main -}}
+            <li class="nav-item ms-0 ms-lg-4">
+              <a class="nav-link text-dark {{ if eq ($firstUrlElement|lower) (.URL|lower) }}active{{end}}" {{ if eq
+                ($firstUrlElement|lower) (.URL|lower) }}aria-current="page" {{end}} href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </nav>
+    </div>
+</div>
