@@ -20,6 +20,14 @@ body {
   }
 }
 
+a {
+  color: $teal-600;
+
+  &:hover {
+    color: $teal-800;
+  }
+}
+
 // Accessibility
 .screen-reader-text {
   border: 0;
