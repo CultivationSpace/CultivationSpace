@@ -1,0 +1,53 @@
+{{ define "main" }}
+<main>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <section id="expect" class="row justify-content-between align-items-center my-5">
+                <h2 class="text-center custom-text mb-5">What to expect</h2>
+                {{ range where .Site.RegularPages "Section" "features" }}
+                    <div class="col-xl-3 col-12 mb-xl-0 mb-4">
+                        <img class="img-fluid mb-4" src="img/{{ .Page.Params.icon }}" alt="{{ .Page.Params.title }}">
+                        <h3>{{ .Page.Params.title }}</h3>
+                        <p>{{ .Page.Params.description }}</p>
+                    </div>
+                {{ end }}
+            </section>
+            <section id="gallery" class="row justify-content-between align-items-center my-5 py-5">
+                <h2 class="text-center custom-text mb-5">Gallery</h2>
+                {{ partial "foldergallery" }}
+            </section>
+            <section id="report" class="row justify-content-between align-items-center mt-5 pb-5 mx-0">
+                <div class="col-xl-8 col-12 mb-xl-0 mb-4">
+                    <p class="title">Report</p>
+                    <h2>Hacking the New Normal</h2>
+                    <p>Hacker- and makerspaces are melting pots of people from different countries, with different backgrounds and experiences, though different risk assessments concerning Covid-19 are now adding to the challenge of getting such a diverse community to work together.</p>
+                    <p>The demand for these spaces remains high and highlighted the importance of the social aspect of in-person gatherings.</p>
+                </div>
+                <div class="col-xl-3 col-12 text-center">
+                    <a class="button-cta" href="files/Hacking The New Normal - Digital Report.pdf" rel="noopener noreferrer" target="_blank">English Report</a>
+                </div>
+            </section>
+            <section id="faq" class="row justify-content-center align-items-center py-5">
+                <h2 class="text-center custom-text mb-5">Frequently Asked Questions</h2>
+                <div class="col-xl-10 col-12">
+                    {{ range .Site.Data.faq }}
+                    <details>
+                        <summary>{{ .question }} {{ partial "fontawesome.html" "solid/chevron-down" }}</summary>
+                        <p>{{ .answer | markdownify }}</p>
+                    </details>
+                    {{ end }}
+                </div>
+            </section>
+            <section id="supporters" class="row justify-content-center align-items-center py-5">
+                <h2 class="text-center custom-text mb-5">Supporters</h2>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12 text-center mb-xl-0 mb-4">
+                    <img src="img/tech-cultivation.svg" alt="Tech Cultivation logo">
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12 text-center">
+                    <img src="img/deutsche.svg" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{{ end }}

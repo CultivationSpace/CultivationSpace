@@ -1,0 +1,367 @@
+// Smooth Scrolling
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+// Body
+body {
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "calt" 1, "frac" 1, "case" 1, "ccmp" 1, "ss01" 1,
+    "ss02" 1, "ss03" 1, "zero" 1;
+  overflow-y: scroll;
+  color: $gray-800;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+// Accessibility
+.screen-reader-text {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.125rem 0.125rem rgba(0, 0, 0, 0.6);
+  clip-path: none;
+  color: $black;
+  background-color: $white;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  width: auto;
+  top: 0.25rem;
+  left: 0.25rem;
+  line-height: normal;
+  padding: 1rem;
+  text-decoration: none;
+  z-index: 25;
+}
+
+// Backgrounds
+.background-white {
+  background-color: $white;
+}
+
+.background-black {
+  background-color: $black;
+}
+
+.background-header {
+  background-image: url("/img/header-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora";
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.custom-text {
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 5px;
+    background-color: $teal-400;
+    display: block;
+    width: 5rem;
+    margin-left: -2.5rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+  }
+}
+
+// Menu & Navbar
+nav .nav-link {
+  display: inline-block;
+  position: relative;
+  font-feature-settings: "cv11" 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.25rem;
+    background: transparent;
+    display: block;
+    margin-top: 0.5rem;
+    transition: 0.25s ease-in-out;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &.active {
+    color: $teal-600;
+
+    &:after {
+      width: 100%;
+      background: $teal-600;
+    }
+  }
+}
+
+#menu label,
+#hamburger {
+  display: none;
+}
+
+#menu-items {
+  font-weight: 600;
+  font-family: "Sora";
+  text-transform: lowercase;
+
+  & .nav-item:last-of-type .nav-link {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: $teal-300;
+    color: $teal-900;
+    transition: 0.25s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: $teal-400;
+    }
+  }
+}
+
+// Home
+.home {
+  font-family: "Sora";
+
+  & h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: $teal-600;
+  }
+  & p {
+    font-size: 1.125rem;
+    color: $gray-500;
+    margin-bottom: 2.5rem;
+  }
+  & .button-cta {
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    background-color: $teal-300;
+    border: 2px solid transparent;
+    color: $teal-900;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: $teal-400;
+    }
+  }
+  & .button-ghost {
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid $teal-900;
+    color: $teal-900;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      color: $white;
+      background-color: $teal-900;
+    }
+  }
+}
+
+// Cards
+#report {
+  padding: 2rem 3rem;
+  color: $gray-800;
+  background-color: $teal-300;
+
+  & h2 {
+    color: $teal-900;
+  }
+
+  & .title {
+    color: $black;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  & .button-cta {
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    background-color: $teal-800;
+    border: 2px solid transparent;
+    color: $white;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: $teal-900;
+    }
+  }
+}
+
+// FAQ
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  position: relative;
+  list-style: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: "Sora";
+  cursor: pointer;
+  margin-block: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+
+  & .inline-svg {
+    color: $teal-600;
+    top: 0;
+  }
+}
+
+details:not(:last-of-type) {
+  border-bottom: 1px solid $gray-300;
+}
+
+details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+// Inner pages
+.post-content {
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $teal-600;
+  }
+  & img {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  & a {
+    color: $teal-600;
+  }
+}
+
+// Footer
+footer {
+  margin-top: auto;
+  background-color: $teal-300;
+  font-family: "Sora";
+}
+
+#footerNav .nav-link {
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+// SVG
+.inline-svg {
+  display: inline-flex;
+  justify-content: center;
+  height: 1em;
+  width: 1em;
+  top: 0.1em;
+  position: relative;
+}
+
+svg,
+svg path {
+  transition: 0.25s ease-in-out;
+}
+
+// Mobile queries
+
+@include media-breakpoint-down(lg) {
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  #menu label {
+    cursor: pointer;
+    display: inline-block;
+    color: $teal-800;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  #menu-items {
+    display: none;
+
+    & .nav-item:last-of-type .nav-link {
+      border-radius: none;
+      padding: 0.5rem 0;
+      background-color: transparent;
+      color: $teal-900;
+    }
+  }
+
+  #footerNavBar {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start !important;
+  }
+
+  #footerNav ul {
+    flex-direction: column;
+    margin-top: 1.5rem;
+    & .nav-link {
+      padding-inline: 0;
+    }
+  }
+
+  #menu input:checked ~ #menu-items {
+    display: block;
+  }
+
+  #report {
+    padding: 1.25rem;
+
+    & .button-cta {
+      width: 100%;
+      display: block;
+    }
+  }
+}

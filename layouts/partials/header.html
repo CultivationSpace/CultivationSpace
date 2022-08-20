@@ -1,0 +1,32 @@
+<header {{ if not .IsHome }}class="background-header"{{ end }}>
+
+    {{ if len .Site.Menus }}
+    {{ partial "menu.html" . }}
+    {{ end }}
+
+    {{ if .IsHome }}
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row home justify-content-between align-items-center py-lg-5 py-0">
+                <div class="col-xl-5 col-12 mb-xl-0 mb-5">
+                    <h1>A place for free technology that matters</h1>
+                    <p>Cultivation Space is a work space where activists, journalists and artists meet to work on projects for the common good. We rely on donations and take no profit.</p>
+                    <a class="button-cta" href="/donate">Donate</a>
+                    <a class="button-ghost ms-3" href="/book">Book a room</a>
+                </div>
+                <div class="col-xl-6 col-12 py-3">
+                    <img class="img-fluid" src="{{ .Site.BaseURL }}/img/header.webp" alt="Cultivation Space interior">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ else }}
+
+    <div class="container-fluid pt-5 mt-5 color-teal-600">
+        <div class="container">
+            <h1 class="mb-3">{{ .Title | markdownify }}</h1>
+        </div>
+    </div>
+    
+    {{ end }}
+</header>

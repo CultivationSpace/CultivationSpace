@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main class="post py-5">
+  <div class="container-fluid">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-10 col-md-12 col-12">
+            <h1 class="post-title mb-3">{{ .Title }}</h1>
+          </div>
+        </div>
+      </div>
+        <div class="container">
+          <div class="row py-4">
+              {{ range .Pages }}
+              <div class="col-xl-4 col-lg-12 col-12 pb-4 categories">
+                  <a class="zoom-wrapper" href="{{ .Permalink }}" aria-label="{{ .Title }} case study"><img class="img-fluid w-100" src="{{ .Site.BaseURL }}/img/work/{{ .Params.image }}" alt="{{ .Title }}"></a>
+                  <a class="title mt-3 mb-0" href="{{ .Permalink }}">{{ .Title }}</a>
+              </div>
+              {{ end }}
+          </div>
+      </div>
+  </div>
+</main>
+{{ end }}

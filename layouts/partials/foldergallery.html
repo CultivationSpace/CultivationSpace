@@ -1,0 +1,12 @@
+{{ $path := print "static/img/gallery" }}
+{{ range (readDir $path) }}
+    {{- $thumbext := "" }}
+    {{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
+    {{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp|webp)" }}<!-- is the current file an image? -->
+    {{- if $isimg }}
+    {{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}
+    <div class="col-xl-4 col-6 mb-3">
+        <img class="img-fluid" loading="lazy" src="/img/gallery/{{ $thumb }}" alt="{{ $thumb }}">
+    </div>
+    {{- end }}
+{{ end }}
