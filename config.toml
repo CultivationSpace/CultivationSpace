@@ -88,6 +88,11 @@ paginate = 8
     url        = "/coc/"
     weight     = "2"
   [[languages.en.menu.main]]
+    identifier = "forum"
+    name       = "Forum"
+    url        = "https://cultivationspace.discourse.group/"
+    weight     = "2"
+  [[languages.en.menu.main]]
     identifier = "donate"
     name       = "Donate"
     url        = "/donate/"
