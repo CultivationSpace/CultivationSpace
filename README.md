@@ -2,7 +2,7 @@
 
 The website for Cultivation Space in Berlin's Wedding at exRotaPrint
 
-## Installtion
+## Installation
 
 Install [hugo](https://gohugo.io/) and [node](https://nodejs.org/en).
 
