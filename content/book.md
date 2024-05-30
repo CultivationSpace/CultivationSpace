@@ -2,9 +2,7 @@
 title = "Book a Room"
 +++
 
-You can request a room or request to use the space here . If you are new or want to use the main space, please provide details on your request so we can contact you.
+Only members can book rooms.
+If you are a member, go to [our forum](https://cultivationspace.discourse.group/t/booking-rooms-in-the-cultivation-space/101) for more information.
 
-<script src="https://unpkg.com/vue@3"></script>
-<script src="https://cdn.anny.co/widget/annyComponents.umd.latest.min.js"></script>
-
-<a-organization-page base-url="https://anny.co/b" dark-mode="false" organization="cultivationspace" placeholder-title="Cultivation Space" hide-resource-header="true" hide-organization-header="true" should-login="false" entity-id=""></a-organization-page>
+If you are not a member yet, please contact us via <contact@cultivation.space> and let us know the details of the event and if and how much you can donate to cover the cost of the room. We can then arrange a date.
