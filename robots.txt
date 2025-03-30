@@ -1,4 +1,1 @@
 # robotstxt.org/
-
-User-agent: ia_archiver
-Disallow: /
