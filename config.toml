@@ -32,7 +32,7 @@ paginate = 8
 
 [author]
   name = "Cultivation Space"
-  email = "contact@techcultivation.org"
+  email = "space@techcultivation.org"
 
 [markup]
   [markup.goldmark]
