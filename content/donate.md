@@ -6,6 +6,8 @@ As a non-profit, Cultivation Space solely relies on donations and funding from o
 
 ## Bank/wire transfer
 
+**Please always include "Donation - Cultivation Space" as the reference when making bank transfers. Otherwise, your donation cannot be allocated to the Cultivation Space.**
+
 Account holder: Center for the Cultivation of Technology\
 Reference: Donation - Cultivation Space\
 IBAN: DE65 4306 0967 4111 9411 01\
