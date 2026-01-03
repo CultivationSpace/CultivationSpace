@@ -4,6 +4,28 @@ html {
   height: 100%;
 }
 
+// View Transitions (cross-document where supported)
+::view-transition-old(root) {
+  animation: fade-out 0.15s ease-out both;
+}
+::view-transition-new(root) {
+  animation: fade-in 0.2s ease-in both;
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
 // Body
 body {
   line-height: 1.5;
@@ -273,6 +295,90 @@ details:not(:last-of-type) {
 details[open] summary svg {
   transform: rotate(180deg);
 }
+
+// Gallery lightbox
+.gallery-thumb img {
+  border-radius: 0.25rem;
+  transition: 0.2s ease-in-out;
+}
+.gallery-thumb:hover img,
+.gallery-thumb:focus-visible img {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.08);
+}
+.gallery-lightbox[hidden] {
+  display: none;
+}
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.gallery-lightbox-figure {
+  margin: 0;
+  max-width: 92vw;
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+@media (min-width: 1200px) {
+  .gallery-lightbox-figure { max-width: 1100px; }
+}
+.gallery-lightbox-figure img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+.gallery-lightbox-caption {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  text-align: center;
+}
+.gallery-lightbox-close,
+.gallery-lightbox-nav {
+  appearance: none;
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.gallery-lightbox-close:hover,
+.gallery-lightbox-nav:hover,
+.gallery-lightbox-close:focus-visible,
+.gallery-lightbox-nav:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+}
+.gallery-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.gallery-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  line-height: 1;
+}
+.gallery-lightbox-prev { left: 1rem; }
+.gallery-lightbox-next { right: 1rem; }
 
 // Inner pages
 .post-content {

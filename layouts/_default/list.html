@@ -12,7 +12,7 @@
           <div class="row py-4">
               {{ range .Pages }}
               <div class="col-xl-4 col-lg-12 col-12 pb-4 categories">
-                  <a class="zoom-wrapper" href="{{ .Permalink }}" aria-label="{{ .Title }} case study"><img class="img-fluid w-100" src="{{ .Site.BaseURL }}/img/work/{{ .Params.image }}" alt="{{ .Title }}"></a>
+                  <a class="zoom-wrapper" href="{{ .Permalink }}" aria-label="{{ .Title }} case study"><img class="img-fluid w-100" src="{{ (print "img/work/" .Params.image) | absURL }}" alt="{{ .Title }}" loading="lazy" decoding="async"></a>
                   <a class="title mt-3 mb-0" href="{{ .Permalink }}">{{ .Title }}</a>
               </div>
               {{ end }}

@@ -1,5 +1,5 @@
 {{ if .Get "src" }}
-<img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" loading="lazy" {{ end }}
+<img src="{{ .Get "src" | safeURL }}" alt="{{ with .Get "alt" }}{{ . | plainify }}{{ else }}{{ end }}" loading="lazy" decoding="async"
     class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }}
     style="{{ . | safeCSS }}" {{ end }} />
 {{ end }}

@@ -6,7 +6,18 @@
     {{- if $isimg }}
     {{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}
     <div class="col-xl-4 col-6 mb-3">
-        <img class="img-fluid" loading="lazy" src="/img/gallery/{{ $thumb }}" alt="{{ $thumb }}">
+        <button type="button" class="gallery-thumb p-0 border-0 bg-transparent w-100" data-gallery-item data-src="{{ (print "img/gallery/" $thumb) | relURL }}" data-alt="{{ $thumb | replaceRE "\\.[^.]+$" "" }}" aria-label="{{ $thumb | replaceRE "\\.[^.]+$" "" }}">
+            <img class="img-fluid" loading="lazy" decoding="async" src="{{ (print "img/gallery/" $thumb) | relURL }}" alt="{{ $thumb | replaceRE "\\.[^.]+$" "" }}">
+        </button>
     </div>
     {{- end }}
 {{ end }}
+<div class="gallery-lightbox" data-gallery-lightbox hidden role="dialog" aria-modal="true" aria-label="Image viewer" tabindex="-1">
+    <button type="button" class="gallery-lightbox-close" data-gallery-close aria-label="Close">&times;</button>
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" data-gallery-prev aria-label="Previous">&#8249;</button>
+    <figure class="gallery-lightbox-figure">
+        <img data-gallery-img src="" alt="" decoding="async">
+        <figcaption class="gallery-lightbox-caption" data-gallery-caption></figcaption>
+    </figure>
+    <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" data-gallery-next aria-label="Next">&#8250;</button>
+</div>

@@ -1,12 +1,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta charset="UTF-8" />
+<meta name="view-transition" content="same-origin" />
+<style>@view-transition{navigation:auto}</style>
 <meta name="author"
-  content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ range .Site.Author }}{{ . }} {{ end }}{{ end }}" />
+  content="{{ if .Params.author }}{{ .Params.author }}{{ else if .Site.Params.author }}{{ .Site.Params.author }}{{ else }}{{ .Site.Title }}{{ end }}" />
 <meta name="description"
-  content="{{ if .Site.Params.description }}{{ .Site.Params.description }}{{ else if .Page.Params.description }}{{ .Page.Params.description }}{{ else }}{{ .Description | default ( .Summary | plainify | truncate 100 ) }}{{ end }}" />
+  content="{{ if .Page.Params.description }}{{ .Page.Params.description }}{{ else if .Site.Params.description }}{{ .Site.Params.description }}{{ else }}{{ .Description | default ( .Summary | plainify | truncate 100 ) }}{{ end }}" />
 <meta name="keywords"
   content="{{ .Site.Params.keywords }}{{ if .Params.tags }}{{ range .Params.tags }}, {{ . }}{{ end }}{{ end }}" />
-<meta name="robots" content="noodp" />
+<meta name="robots" content="index,follow" />
 <meta name="theme-color" content="{{ if .Params.background }}{{ .Params.background }}{{ else }}#48AD9C{{ end }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -16,18 +18,28 @@
 </title>
 {{ end }}
 
+<!-- Font Preloads -->
+<link rel="preload" href="{{ "fonts/inter/inter.var.woff2" | relURL }}" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="{{ "fonts/sora/sora-v10-latin-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="{{ "fonts/sora/sora-v10-latin-600.woff2" | relURL }}" as="font" type="font/woff2" crossorigin />
+
 <!-- CSS -->
-{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }} 
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }} 
+{{ $style := resources.Get "scss/main.scss" | css.Sass $options }}
 
 {{ if hugo.IsProduction }}
-  {{ $style = $style | resources.PostCSS | resources.Fingerprint "sha256" }}
+  {{ $postcssBin := "node_modules/.bin/postcss" }}
+  {{ if fileExists $postcssBin }}
+    {{ $style = $style | css.PostCSS | resources.Fingerprint "sha256" }}
+  {{ else }}
+    {{ $style = $style | resources.Fingerprint "sha256" }}
+  {{ end }}
 {{ end }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 {{ range $val := $.Site.Params.customCSS }} {{ if gt (len $val) 0 }}
-<link rel="stylesheet" type="text/css" href="{{ $val }}" integrity="{{ $style.Data.Integrity }}" />
+<link rel="stylesheet" type="text/css" href="{{ $val }}" />
 {{ end }} 
 {{ end }}
 
@@ -50,7 +62,7 @@
 
 <!-- JSON Feed -->
 {{ if .OutputFormats.Get "json" }}
-<link href="{{ if .OutputFormats.Get "json" }}{{ .Site.BaseURL }}feed.json{{ end }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" /> {{ end }}
+<link href="{{ "feed.json" | absURL }}" rel="alternate" type="application/json" title="{{ .Site.Title }}" /> {{ end }}
 
 <!-- Custom head tags -->
 {{- if templates.Exists "partials/extra-head.html" -}}

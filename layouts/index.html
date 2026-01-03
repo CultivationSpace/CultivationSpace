@@ -6,7 +6,7 @@
                 <h2 class="text-center custom-text mb-5">What to expect</h2>
                 {{ range where .Site.RegularPages "Section" "features" }}
                     <div class="col-xl-3 col-12 mb-xl-0 mb-4">
-                        <img class="img-fluid mb-4" src="img/{{ .Page.Params.icon }}" alt="{{ .Page.Params.title }}">
+                        <img class="img-fluid mb-4" src="{{ (print "img/" .Page.Params.icon) | relURL }}" alt="{{ .Page.Params.title }}" loading="lazy" decoding="async">
                         <h3>{{ .Page.Params.title }}</h3>
                         <p>{{ .Page.Params.description }}</p>
                     </div>
@@ -28,7 +28,7 @@
                 </div>
             </section>
             <section id="location" class="row justify-content-center align-items-center py-5">
-                <img class="mb-3" src="img/icon-color.svg" style="width: 75px !important;" alt="">
+                <img class="mb-3" src="{{ "img/icon-color.svg" | relURL }}" style="width: 75px !important;" alt="" loading="lazy" decoding="async">
                 <h2 class="text-center custom-text mb-5">Where to find us</h2>
                 <div class="col-xl-4 col-12">
                     <p><span class="fw-bold">Cultivation Space</span><br />
@@ -44,7 +44,7 @@
                 </div>
             </section>
             <section id="faq" class="row justify-content-center align-items-center py-5">
-                <img class="mb-3" src="img/icon-color.svg" style="width: 75px !important;" alt="">
+                <img class="mb-3" src="{{ "img/icon-color.svg" | relURL }}" style="width: 75px !important;" alt="" loading="lazy" decoding="async">
                 <h2 class="text-center custom-text mb-5">Frequently Asked Questions</h2>
                 <div class="col-xl-10 col-12">
                     {{ range .Site.Data.faq }}
@@ -58,10 +58,10 @@
             <section id="supporters" class="row justify-content-center align-items-center py-5">
                 <h2 class="text-center custom-text mb-5">Supporters</h2>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12 text-center mb-xl-0 mb-4">
-                    <img src="img/tech-cultivation.svg" alt="Tech Cultivation logo">
+                    <img src="{{ "img/tech-cultivation.svg" | relURL }}" alt="Tech Cultivation logo" loading="lazy" decoding="async">
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-12 text-center">
-                    <img src="img/deutsche.svg" alt="">
+                    <img src="{{ "img/deutsche.svg" | relURL }}" alt="" loading="lazy" decoding="async">
                 </div>
             </section>
         </div>

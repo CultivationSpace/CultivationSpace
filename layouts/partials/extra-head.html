@@ -1,0 +1,14 @@
+{{- $logo := ("img/logo.svg" | absURL) -}}
+{{- $org := dict "@context" "https://schema.org" "@type" "Organization" "name" .Site.Title "url" .Site.BaseURL "logo" $logo -}}
+<script type="application/ld+json">{{ $org | jsonify | safeHTML }}</script>
+{{- $ws := dict "@context" "https://schema.org" "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL "description" (.Site.Params.description | default "") -}}
+<script type="application/ld+json">{{ $ws | jsonify | safeHTML }}</script>
+{{- if and .IsHome (isset .Site.Data "faq") -}}
+  {{- $ents := slice -}}
+  {{- range .Site.Data.faq -}}
+    {{- $ents = $ents | append (dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) -}}
+  {{- end -}}
+  {{- $faq := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $ents -}}
+<script type="application/ld+json">{{ $faq | jsonify | safeHTML }}</script>
+{{- end -}}
+
