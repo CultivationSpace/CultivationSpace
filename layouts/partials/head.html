@@ -18,10 +18,10 @@
 
 <!-- CSS -->
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }} 
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass $options }}
 
 {{ if hugo.IsProduction }}
-  {{ $style = $style | resources.PostCSS | resources.Fingerprint "sha256" }}
+  {{ $style = $style | css.PostCSS | resources.Fingerprint "sha256" }}
 {{ end }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
