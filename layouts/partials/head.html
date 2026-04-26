@@ -1,7 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta charset="UTF-8" />
 <meta name="author"
-  content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ range .Site.Author }}{{ . }} {{ end }}{{ end }}" />
+  content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author | default .Site.Title }}{{ end }}" />
 <meta name="description"
   content="{{ if .Site.Params.description }}{{ .Site.Params.description }}{{ else if .Page.Params.description }}{{ .Page.Params.description }}{{ else }}{{ .Description | default ( .Summary | plainify | truncate 100 ) }}{{ end }}" />
 <meta name="keywords"
