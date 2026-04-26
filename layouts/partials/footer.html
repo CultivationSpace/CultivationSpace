@@ -11,7 +11,7 @@
               {{- range .Site.Menus.main -}}
               <li class="nav-item ms-0 ms-lg-4">
                 <a class="nav-link text-dark {{ if eq ($firstUrlElement|lower) (.URL|lower) }}active{{end}}" {{ if eq
-                  ($firstUrlElement|lower) (.URL|lower) }}aria-current="page" {{end}} href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                  ($firstUrlElement|lower) (.URL|lower) }}aria-current="page" {{end}} href="{{ .URL | relURL }}">{{ .Name }}</a>
               </li>
               {{ end }}
               <li class="nav-item ms-0 ms-lg-4">
