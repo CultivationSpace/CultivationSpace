@@ -1,9 +1,11 @@
 {{ $main := resources.Get "js/main.js" }}
+{{ if and $main (gt (len $main.Content) 0) }}
 {{ $secureJS := slice $main | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha256" }}
-<script src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+<script src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}" defer></script>
+{{ end }}
 
 {{ range $val := $.Site.Params.customJS }}
 {{ if gt (len $val) 0 }}
-<script src="{{ $val }}"></script>
+<script src="{{ $val }}" defer></script>
 {{ end }}
 {{ end }}

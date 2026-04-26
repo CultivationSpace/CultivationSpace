@@ -1,12 +1,12 @@
 <div class="container-fluid pt-4">
     <div id="menu" class="container">
       <nav class="navbar navbar-expand-lg justify-content-between align-items-center" aria-label="Primary">
-        <a aria-label="Cultivation Space Logo" class="navbar-brand" href="{{ .Site.BaseURL }}">
-          <img class="img-fluid" src="{{ .Site.BaseURL }}/img/logo.svg" alt="Cultivation Space logo" width="250px" height="auto">
+        <a aria-label="Cultivation Space Logo" class="navbar-brand" href="{{ "/" | relLangURL }}">
+          <img class="img-fluid" src="{{ "img/logo.svg" | absURL }}" alt="Cultivation Space logo" width="250px" height="auto" style="view-transition-name: site-logo;">
         </a>
 
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
+        <label for="hamburger" role="button" aria-label="Toggle navigation" aria-controls="menu-items" aria-expanded="false">&#9776;</label>
+        <input type="checkbox" id="hamburger" aria-label="Toggle navigation" aria-controls="menu-items"/>
 
         <div id="menu-items" class="collapse navbar-collapse flex-grow-0 mt-lg-0 mt-4">
           <ul class="navbar-nav align-items-lg-center">

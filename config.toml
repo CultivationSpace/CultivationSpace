@@ -15,7 +15,7 @@ publishDir   = "public"
 
 buildDrafts  = false
 buildFuture  = false
-buildExpored = false
+buildExpired = false
 canonifyURLs = true
 
 enableRobotsTXT = true
@@ -28,7 +28,9 @@ disable404     = false
 disableHugoGeneratorInject = true
 
 pluralizeListTitles = false
-paginate = 8
+
+[pagination]
+  pagerSize = 8
 
 [author]
   name = "Cultivation Space"
@@ -51,11 +53,12 @@ paginate = 8
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
+  author = "Cultivation Space"
 
  # Metadata mostly used in document's head
   description = "Cultivation Space is a workspace where activists, journalists and artists meet to work on projects for the common good. We rely on donations and take no profit."
   keywords = ""
-  images = ["img/default.png"]
+  images = ["img/header.webp"]
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   gitUrl = "https://github.com/CultivationSpace/CultivationSpace/commit/"
@@ -109,8 +112,9 @@ paginate = 8
     simple = true
   [privacy.twitter]
     disable = false
-    enableDNT = true
     simple = false
+  [privacy.x]
+    enableDNT = true
   [privacy.vimeo]
     disable = false
     enableDNT = true
